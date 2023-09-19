@@ -2,8 +2,7 @@ package main
 import input.configuration.provider_config as tfplan
 
 allowed_providers := {
-"registry.terraform.io/hashicorp/aws",
-"registry.terraform.io/hashicorp/azurerm"
+    "registry.terraform.io/hashicorp/azurerm"
 }
 
 whitelisted_providers[provider]{

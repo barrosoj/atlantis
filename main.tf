@@ -1,12 +1,6 @@
 provider "azurerm" {
   features {}
 }
-provider "aws" {
-  region     = "us-west-2"
-  access_key = "AKIAZ7W6PCHWDNVLSGO5"
-  secret_key = "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"
-}
-
 
 resource "azurerm_resource_group" "main" {
   name     = var.resource_group_name
@@ -33,11 +27,8 @@ resource "azurerm_subnet" "main" {
   address_prefixes     = [each.value]
 }
 
-resource "aws_instance" "app_server" {
+module "aws" {
+  source        = "./modules"
   ami           = "ami-830c94e3"
   instance_type = "t3.micro"
-
-  tags = {
-    Name = "ExampleAppServerInstancev3"
-  }
 }
