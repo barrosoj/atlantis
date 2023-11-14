@@ -2,7 +2,7 @@ provider "azurerm" {
   features {}
 }
 provider "aws" {
-  region     = "us-west-1"
+  region     = "us-west-4"
   access_key = "AKIAZ7W6PCHWDNVLSGO5"
   secret_key = "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"
 }
