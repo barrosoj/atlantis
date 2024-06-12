@@ -3,7 +3,6 @@ variable "common_tags" {
   description = "Common tags to apply to all resources."
   default = {
     "environment" = "qua"
-    "purpose"     = "opa"
   }
 }
 
@@ -14,9 +13,8 @@ variable "location" {
 }
 
 variable "resource_group_name" {
-  type        = string
-  description = "Name of the resource group to create."
-  default     = "opa-test"
+  type    = string
+  default = "opa-test"
 }
 
 variable "vnet_address_space" {
