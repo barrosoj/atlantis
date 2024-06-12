@@ -1,6 +1,6 @@
 version: 2
 mergeable:
-  - when: issues.*, pull_request.*, pull_request_review.*
+  - when: issues.*
     name: "Test mergeable staging installation"
     validate: []
     pass:
