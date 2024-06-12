@@ -1,8 +1,13 @@
 version: 2
 mergeable:
-  - when: issues.*
+  - when: issues.opened
     name: "Test mergeable staging installation"
-    validate: []
+    validate:
+      - do: title
+        # Enforce semantic release convention.
+        must_include:
+          regex: ^(feat|docs|chore|fix|refactor|test|style|perf)(\(\w+\))?:.+$
+          message: Semantic release conventions must be follow
     pass:
       - do: comment
         payload:
