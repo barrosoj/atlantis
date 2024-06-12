@@ -2,6 +2,7 @@ version: 2
 mergeable:
   - when: issues.opened
     name: "Test mergeable staging installation"
+    validate: []
     pass:
       - do: comment
         payload:
