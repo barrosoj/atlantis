@@ -1,0 +1,10 @@
+version: 2
+mergeable:
+  - when: issues.opened, pull_request.opened
+    name: "Test mergeable staging installation"
+    validate: []
+    pass:
+      - do: comment
+        payload:
+          body: >
+            Hello! I'm the PRODUCTION mergeable bot 🤖! Just wanted to let you I'm able to communicate with GitHub and everything appears to be okay...for now!
