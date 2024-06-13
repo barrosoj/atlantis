@@ -7,4 +7,4 @@ mergeable:
       - do: comment
         payload:
           body: >
-            Hello! I'm the PRODUCTION mergeable bot 🤖! Just wanted to let you I'm able to communicate with GitHub and everything appears to be okay...for now!
+            Hello! I'm the PRODUCTION mergeable bot 🤖! This is working here but not in org!!
